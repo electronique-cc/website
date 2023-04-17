@@ -1,0 +1,88 @@
+html {
+  background-image: url(https://source.unsplash.com/random/?space,universe,stars,night,sky);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto;
+  width: auto;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+h1 {
+  font-size: 5rem;
+  font-family: input-mono-compressed, monospace;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 0px 0px 20px #5534db;
+  animation: appear 2.6s linear;
+}
+p {
+  font-size: 1.2rem;
+  font-family: futura-pt, sans-serif; /* why sans-serif? Because it's the default font for the body . WHat does that mean?  It means that if you don't specify a font, it will use the default font.  */
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: #ffffff;
+  animation: disappear-reappear 4s linear infinite;
+}
+
+a {
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  color: #3498db;
+  font-size: 1.1rem;
+  border: 3px solid #3498db;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover {
+  background-color: #3498db;
+  color: #f0f0f0;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(20vh);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes disappear-reappear {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  25% {
+    opacity: 0;
+    transform: translateY(20vh);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  85% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+}

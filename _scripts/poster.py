@@ -19,7 +19,10 @@ def recursive_block(content, block, source_dir, template_dir, extensions, langua
                     if link.endswith(ext):
                         link = link.replace(ext, ".html")
                 print(link)
-                content2replace += recursive_template.replace("<!-- post-title -->", title).replace("<!-- post-date -->", modified_date).replace("<!-- post-url -->", link).replace("<!-- post-author -->", tags["author"] if "author" in tags else "").replace("<!-- post-description -->", tags["description"] if "description" in tags else "").replace("<!-- post-image -->", tags["image"] if "image" in tags else "")
+                #post-categories are in the form of "category1, category2,category3" so we need to split them by "," and then remove the spaces and then convert them to a string with ", " as separator
+                categories = ", ".join([category.strip() for category in tags["categories"].split(",")]) if "categories" in tags else ""
+                categories = categories.upper()
+                content2replace += recursive_template.replace("<!-- post-title -->", title).replace("<!-- post-date -->", modified_date).replace("<!-- post-url -->", link).replace("<!-- post-author -->", tags["author"] if "author" in tags else "").replace("<!-- post-description -->", tags["description"] if "description" in tags else "").replace("<!-- post-image -->", tags["image"] if "image" in tags else "").replace("<!-- read-more -->", "Read more" if language == "en" else "Lire la suite").replace("<!-- post-categories -->", categories)
     block = f"<!-- FOR {block} -->"
     content = content.replace(block, content2replace)
     return content
