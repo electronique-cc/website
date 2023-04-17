@@ -149,3 +149,11 @@
 .post-author {
   text-align: right;
 }
+
+/* shop */
+
+.ecwid {
+  background-color: #fff;
+  margin-top: 50px;
+  padding: 100px;
+}

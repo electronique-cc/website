@@ -1,34 +1,34 @@
 /* POST STYLES ---------------------------------------------------------------------------------------------- */
 
 .post-content h1 {
-  font-size: 8rem;
+  font-size: max(10vw, 6rem);
   margin-bottom: 20px;
   text-align: center;
   padding-top: 100px;
 }
 
 .post-content h2 {
-  font-size: 6rem;
+  font-size: max(9vw, 5rem);
   margin-bottom: 20px;
 }
 
 .post-content h3 {
-  font-size: 5rem;
+  font-size: max(8vw, 4rem);
   margin-bottom: 20px;
 }
 
 .post-content h4 {
-  font-size: 4rem;
+  font-size: max(6vw, 3rem);
   margin-bottom: 20px;
 }
 
 .post-content h5 {
-  font-size: 3rem;
+  font-size: max(4vw, 3.5rem);
   margin-bottom: 20px;
 }
 
 .post-content h6 {
-  font-size: 2rem;
+  font-size: max(3vw, 2rem);
   margin-bottom: 20px;
 }
 
@@ -39,6 +39,7 @@
 .post-content h5,
 .post-content h6 {
   padding: 0.5rem;
+  word-wrap: break-word;
 }
 
 .post-content p, a, li {
@@ -116,7 +117,7 @@ code:not(pre code) {
   text-align: left;
   word-spacing: normal;
   word-break: normal;
-  word-wrap: normal;
+  word-wrap: break-word;
   line-height: 1.5;
   -moz-tab-size: 4;
   -o-tab-size: 4;
