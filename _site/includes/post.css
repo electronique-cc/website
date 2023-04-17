@@ -1,166 +1,51 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.button {
-  background-color: transparent;
-  border: 2px solid #dd9933;
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 1.5rem;
-}
-
-.button:hover {
-  background-color: #dd9933;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* Header */
-
-header {
-  /*background-color: NOT #dd9933 because of the logo color! iNstead use something like #333 */
-  background-color: #333;
-  position: fixed;
-  width: 100%;
-  display: flex;
-  height: 10vh;
-  justify-content: space-between;
-  z-index: 100;
-  margin-bottom: 10px;
-  align-items: center;
-  padding: min(1rem, 20px);
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header .logo {
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-decoration: none;
-  text-align: center;
-  display: inline-block;
-  height: min(4vh, 6vw);
-}
-
-header .nav-list {
-  display: flex;
-  list-style: none;
-  padding: min(1rem, 10px); /* common style */
-}
-
-header .nav-item {
-  padding: min(1rem, 10px);
-  border-radius: 5px;
-  font-size: 1.5rem;
-  color: #fff;
-}
-
-header .nav-list a {
-  text-decoration: none;
-}
-
-header .nav-item:hover {
-  background-color: #fff;
-  color: #dd9933;
-}
-
-header .menu-toggle {
-  display: none;
-  color: #000;
-  font-size: 1.5rem;
-  text-align: right;
-  padding: min(1rem, 10px);
-}
-
-@media screen and (max-width: 768px) {
-  header .logo {
-    display: inline-box; /* removed duplicate style */
-  }
-
-  header .nav-list {
-    display: none;
-    list-style: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: #dd9933;
-    padding: min(1rem, 10px); /* added to match common style */
-  }
-
-  header .menu-toggle {
-    display: block;
-  }
-
-  header .menu-toggle:hover {
-    background-color: #fff;
-    cursor: pointer;
-  }
-
-  header .nav-item {
-    padding: min(0.5rem, 5px);
-  }
-
-  header .menu-toggle.active + .nav-list {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  header .nav-list {
-    padding: min(1rem, 10px); /* added to match common style */
-  }
-
-  header .nav-item {
-    font-size: 1.5rem;
-  }
-
-  header .menu-toggle {
-    display: none;
-  }
-}
-
-.header-spacer {
-  height: 10vh;
-}
-
 /* POST STYLES ---------------------------------------------------------------------------------------------- */
 
 .post-content h1 {
-  font-family: input-mono-compressed, monospace;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 8vw;
+  font-size: 8rem;
   margin-bottom: 20px;
   text-align: center;
   padding-top: 100px;
 }
 
 .post-content h2 {
-  font-family: input-mono-compressed, monospace;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 30px;
+  font-size: 6rem;
   margin-bottom: 20px;
 }
 
-.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 {
+.post-content h3 {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+.post-content h4 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.post-content h5 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.post-content h6 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
   padding: 0.5rem;
+}
+
+.post-content p, a, li {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 .post-main-image {
@@ -183,16 +68,6 @@ header .menu-toggle {
   text-align: left;
   box-sizing: border-box;
   padding: 5vw;
-}
-
-.post-content blockquote:not(.image-caption) {
-  font-family: input-mono-compressed, monospace;
-  font-weight: 200;
-  font-style: normal;
-  margin-bottom: 20px;
-  text-align: center;
-  border-left: 2px solid #fff;
-  padding-left: 20px;
 }
 
 .post-content ul,
@@ -229,9 +104,6 @@ header .menu-toggle {
 }
 
 .image-caption {
-  font-family: input-mono-compressed, monospace;
-  font-weight: 200;
-  font-style: normal;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -255,13 +127,4 @@ code:not(pre code) {
   hyphens: none;
   background: #f5f2f0;
   display: inline-block;
-}
-
-/* Footer */
-
-footer {
-  background-color: #dd9933;
-  color: #fff;
-  padding: 100px;
-  text-align: center;
 }

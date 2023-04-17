@@ -10,7 +10,9 @@ type: post
 categories: Test, Blog, Test
 ---
 # Sample Article in Markdown
+
 <img src="<!-- image -->" alt="post main image" class="post-main-image">
+
 This is a sample article in Markdown that showcases various Markdown syntax.
 
 ## Headers

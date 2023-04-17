@@ -1,0 +1,204 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.button {
+  background-color: transparent;
+  border: 2px solid #dd9933;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: inline-block;
+  max-width: 150px;
+}
+
+.button:hover {
+  background-color: #dd9933;
+  color: #fff;
+  cursor: pointer;
+}
+
+h1 {
+  font-family: zuume-edge, sans-serif;
+  font-weight: 400;
+}
+
+*:not(h1, .electronique, blockquote, blockquote p, code, strong) {
+  font-family: menca, sans-serif;
+  font-weight: 500;
+}
+
+.electronique {
+  font-family: ethnocentric, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  color: #dd9933;
+}
+
+
+blockquote {
+  font-family: menca, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  text-align: center;
+}
+
+blockquote:not(.image-caption) {
+  border-left: 2px solid #000;
+  padding-left: 20px;
+  margin-left: 20px;
+}
+
+a {
+  margin: 0;
+}
+
+/* Header */
+
+header {
+  /*background-color: NOT #dd9933 because of the logo color! iNstead use something like #333 */
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  max-width: 100vw;
+  display: flex;
+  height: 10vh;
+  justify-content: space-between;
+  z-index: 100;
+  padding: min(1rem, 20px);
+  padding-right: min(1rem, 20px);
+  margin: 0;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: min(1rem, 20px);
+}
+
+header .logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  height: min(4vh, 6vw);
+  margin: 0;
+}
+
+header .nav-list {
+  display: flex;
+  list-style: none;
+  padding: min(1rem, 10px); /* common style */
+}
+
+header .nav-item {
+  padding: min(1rem, 10px);
+  border-radius: 5px;
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0;
+}
+
+header .nav-list a {
+  text-decoration: none;
+  display: inline-block;
+  max-width: calc(100% - 35px);
+
+}
+
+header .nav-item:hover {
+  background-color: #fff;
+  color: #dd9933;
+}
+
+header .menu-toggle {
+  display: none;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: right;
+  padding: min(1rem, 10px);
+}
+
+@media screen and (max-width: 768px) {
+  header .logo {
+    display: inline-box; /* removed duplicate style */
+  }
+
+  header .nav-list {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #dd9933;
+    padding: min(1rem, 10px); /* added to match common style */
+  }
+
+  header .menu-toggle {
+    display: block;
+    margin: 0;
+    margin-right: min(1rem, 10px); /* added to match common style */
+  }
+
+  header .menu-toggle:hover {
+    background-color: #fff;
+    border-radius: 5px;
+    color: #dd9933;
+    cursor: pointer;
+  }
+
+  header .nav-item {
+    padding: min(0.5rem, 5px);
+  }
+
+  header .menu-toggle.active + .nav-list {
+    display: flex;
+    background-color: #333;
+    /*align vertically the menu items*/
+    flex-direction: column;
+    align-items: left;
+
+  }
+
+  header .menu-toggle.active + .nav-list .nav-item {
+    color: #dd9933;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header .nav-list {
+    padding: min(1rem, 10px); /* added to match common style */
+  }
+
+  header .nav-item {
+    font-size: 1.5rem;
+  }
+
+  header .menu-toggle {
+    display: none;
+  }
+}
+
+.header-spacer {
+  height: calc(10vh + min(1rem, 20px));
+}
+
+/* Footer */
+
+footer {
+  background-color: #dd9933;
+  color: #fff;
+  padding: 100px;
+  text-align: center;
+}
