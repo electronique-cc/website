@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Language Redirect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0; url=/en/"> <!-- Default language -->
+  <script>
+    // Check if a language preference is stored in local storage
+    let language = localStorage.getItem("language");
+
+    // If no language preference is stored, set the default language to "en"
+    if (!language) {
+      language = "en";
+      localStorage.setItem("language", language);
+    }
+
+    // Redirect the user to the language-specific homepage
+    window.location.href = `/${language}/`;
+  </script>
+</head>
+<body>
+  <h1>Redirecting...</h1>
+</body>
+</html>
