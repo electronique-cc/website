@@ -146,11 +146,11 @@ La kingroon kp3S est une imprimante de type fdm qui utilise la technologie direc
 
 <div class="images">
 <div class="image">
-<img src="/images/choisir-imprimante-3d-2022/kingroonKP3S.png" alt="Kingroon KP3S">
+<img src="/images/choisir-imprimante-3d-2022/KingroonKP3S.png" alt="Kingroon KP3S">
 <blockquote class="image-caption">Kingroon KP3S</blockquote>
 </div>
 <div class="image">
-<img src="/images/choisir-imprimante-3d-2022/kingroonKP3SPRO.png" alt="Kingroon KP3S pro">
+<img src="/images/choisir-imprimante-3d-2022/KingroonKP3SPRO.png" alt="Kingroon KP3S pro">
 <blockquote class="image-caption">Kingroon KP3S pro</blockquote>
 </div>
 </div>
