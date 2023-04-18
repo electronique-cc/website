@@ -205,3 +205,13 @@ footer {
   padding: 100px;
   text-align: center;
 }
+
+footer p {
+  color: #fff;
+}
+
+footer p a {
+  color: #fff;
+  text-decoration: none;
+  font-style: normal;
+}
