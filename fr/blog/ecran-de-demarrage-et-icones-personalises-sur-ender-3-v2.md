@@ -8,7 +8,7 @@ type: post
 lang: fr
 author: Paillat
 categories: ender-3,impression-3d
-coverImage: /images/ecran-de-demarrage-et-icones-personalises-sur-ender-3-v2/En-avant.png
+image: /images/ecran-de-demarrage-et-icones-personalises-sur-ender-3-v2/En-avant.png
 ---
 
 Si vous possédez une imprimante 3d **Ender 3 V2** de chez **CREALITY**, sachez qu'il est très facilement possible de customiser l'interface graphique de celle ci. Pour ce faire vous n'aurez besoin uniquement d'une **carte micro SD** et du logiciel **PAINT.net**. Si vous voulez modifier aussi les icones, vous devrez télécharger **Dwin ICO Tools** (voir dans la rubrique installation) Nous allons maintenant voir étape par étape comment le faire:
