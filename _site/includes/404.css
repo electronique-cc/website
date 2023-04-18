@@ -1,12 +1,33 @@
 html {
-  background-image: url(https://source.unsplash.com/random/?space,universe,stars,night,sky);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   height: auto;
   width: auto;
   min-height: 100%;
   min-width: 100%;
+  overflow: hidden;
+}
+
+html::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(https://source.unsplash.com/random/?space,universe,stars,night,sky);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: scale 40s linear infinite;
+  z-index: -1;
+}
+
+
+@keyframes scale {
+  50% {
+    transform: scale(1.2);
+  }
 }
 
 .wrapper {
@@ -19,16 +40,15 @@ html {
 }
 h1 {
   font-size: 5rem;
-  font-family: input-mono-compressed, monospace;
-  font-weight: 700;
-  margin-bottom: 20px;
+  font-family: zuume-edge, sans-serif;
+  font-weight: 400;  margin-bottom: 20px;
   color: #ffffff;
   text-shadow: 0px 0px 20px #5534db;
   animation: appear 2.6s linear;
 }
 p {
   font-size: 1.2rem;
-  font-family: futura-pt, sans-serif; /* why sans-serif? Because it's the default font for the body . WHat does that mean?  It means that if you don't specify a font, it will use the default font.  */
+  font-family: menca, Arial, Helvetica, sans-serif;
   font-weight: 500;
   margin-bottom: 30px;
   color: #ffffff;
@@ -36,8 +56,8 @@ p {
 }
 
 a {
-  font-family: futura-pt, sans-serif;
-  font-weight: 500;
+  font-family: menca, Arial, Helvetica, sans-serif;
+  font-weight: 700;
   text-decoration: none;
   color: #3498db;
   font-size: 1.1rem;
@@ -72,7 +92,7 @@ a:hover {
     opacity: 0;
     transform: translateY(20vh);
   }
-  70% {
+  65% {
     opacity: 1;
     transform: translateY(0);
   }
