@@ -21,6 +21,7 @@ Vous trouverez par exemple une catégorie entière dédiée à la calibration. L
 </div>
 </div>
 
+
 ## Installation Windows
 
 Pour installer SuperSlicer sur Windows vous devez télécharger la dernière version [ici](http://github.com/supermerill/SuperSlicer/releases/latest). Choisissez la version windows, **.zip**, car il y en a plusieurs.
