@@ -169,3 +169,23 @@ code:not(pre code) {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+@media screen and (max-width: 768px) {
+  .post-content .image {
+    width: 100%;
+  }
+  
+}
+
+.post-content .columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.post-content .column {
+  width: 33%;
+  padding: 10px;
+  box-sizing: border-box;
+}

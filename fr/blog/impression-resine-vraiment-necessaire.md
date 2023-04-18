@@ -1,11 +1,17 @@
 ---
 title: "L'impression résine, vraiment nécessaire?"
-date: "2022-05-21"
-categories: 
-  - "impression-3d"
-  - "resine"
-coverImage: "En-avant-1.png"
+date: 21 mai 2022
+unformat-date: 2022.05.21
+categories: impression-3d",resine
+image: /images/impression-resine-vraiment-necessaire/En-avant.png
+static: true
+template: post_fr
+type: post
+lang: fr
+author: Paillat
 ---
+
+<img src="<!-- image -->" alt="post main image" class="post-main-image">
 
 Ces dernières années l’impression 3d s’est démocratisée dans le milieu du bricolage, et maintenant c’est au tour d’une nouvelle technologie: l’impression 3d en résine, mais cela est-ce vraiment nécessaire dans ce domaine? C’est ce que nous allons voir.
 
@@ -15,9 +21,12 @@ Nous allons tout d’abord nous intéresser au principe de fonctionnement d’un
 
 Lors de l'impression d'une couche, le plateau descend pour presque toucher le fond du bac de résine liquide, en se plongeant dans la résine. Lorsque le plateau s'arrête, l'écran affiche toutes les parties à ne pas imprimer, pour les protéger. Les leds UV sous l'écran vont s'allumer et polymériser, c'est-à-dire durcir, la résine non protégée par l'écran. Cela crée une couche. Ce processus se répètera autant de fois qu'il y a de couches. Cela crée un objet fini.
 
-![](images/Impression-lcd-msla.png)
-
-_Schéma représentant une imprimante MSLA Edited from [Dsazer25](https://commons.wikimedia.org/wiki/File:DigitalWorkflow.001.jpg), CC BY-SA 4.0 [https://creativecommons.org/licenses/by-sa/4.0](https://creativecommons.org/licenses/by-sa/4.0), via Wikimedia Commons_
+<div class="images">
+<div class="image" style="width: 75% !important;">
+<img src="/images/impression-resine-vraiment-necessaire/Impression-lcd-msla.png" alt="Impression-lcd-msla.png">
+<blockquote class="image-caption">Schéma représentant une imprimante MSLA Edited from <a href="https://commons.wikimedia.org/wiki/File:DigitalWorkflow.001.jpg">Dsazer25</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a> <a href="https://creativecommons.org/licenses/by-sa/4.0">https://creativecommons.org/licenses/by-sa/4.0</a>, via Wikimedia Commons</blockquote>
+</div>
+</div>
 
 ## Dois-je acheter une imprimane résine?
 
@@ -32,28 +41,27 @@ Vous pouvez aussi utiliser une imprimante résine pour imprimer une pièce final
 ## Avantages et défauts
 
 Nous allons maintenant observer quels sont les avantages et les défauts d'une imprimante 3d résine.
-
-### Avantages
-
-- **Précision** qui est conséquente à la qualité de l'écran, mais un 2k suffis amplement
-
-- **Vitesse indépendante du nombre de pièces** car elles s'impriment toutes en même temps
-
-- **Facilité de calibration** il n'y a pratiquement rien à faire
-
-- **Professionnalité du travail final** il peut être confondu avec un objet issu d'une production industrielle
-
-### Défauts
-
-- **Volume d'impression** très petit si vous avez un budget limité
-
-- **Toxicité de la résine liquide** il faut TOUJOURS porter un masque FFP3 et des gants
-
-- **Difficulté du post-traitement** il faut d'abord nettoyer les pièces dans de l'alcool puis les durcir définitivement sous une lampe UV, ce qui nous amène à la
-
-- **Nécessité d'appareillage supplémentaire** une lampe UV et de l'alcool
-
-- **Fragilité de la résine**, elle se casse plus facilement suite à un choc que le PLA
+<div class="columns">
+<div class="column">
+<h3>Avantages</h3>
+<ul>
+<li><strong>Précision</strong> qui est conséquente à la qualité de l'écran, mais un 2k suffis amplement</li>
+<li><strong>Vitesse indépendante du nombre de pièces</strong> car elles s'impriment toutes en même temps</li>
+<li><strong>Facilité de calibration</strong> il n'y a pratiquement rien à faire</li>
+<li><strong>Professionnalité du travail final</strong> il peut être confondu avec un objet issu d'une production industrielle</li>
+</ul>
+</div>
+<div class="column">
+<h3>Défauts</h3>
+<ul>
+<li><strong>Volume d'impression</strong> très petit si vous avez un budget limité</li>
+<li><strong>Toxicité de la résine liquide</strong> il faut TOUJOURS porter un masque FFP3 et des gants</li>
+<li><strong>Difficulté du post-traitement</strong> il faut d'abord nettoyer les pièces dans de l'alcool puis les durcir définitivement sous une lampe UV, ce qui nous amène à la</li>
+<li><strong>Nécessité d'appareillage supplémentaire</strong> une lampe UV et de l'alcool</li>
+<li><strong>Fragilité de la résine</strong>, elle se casse plus facilement suite à un choc que le PLA</li>
+</ul>
+</div>
+</div>
 
 Maintenant il est à vous de choisir, si vous pensez qu'une imprimante résine est nécessaire, de l'acheter. J'espère que cet article vous aura plu, n'hésitez pas à laisser un commentaire!
 

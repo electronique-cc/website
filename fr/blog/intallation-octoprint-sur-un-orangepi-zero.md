@@ -1,18 +1,23 @@
 ---
 title: "Installation d'Octoprint sur un Orangepi zero"
-date: "2022-10-19"
-categories: 
-  - "electronique"
-  - "fdm"
-  - "impression-3d"
-  - "octoprint"
-  - "orangepi"
-coverImage: "En-avant-1.png"
+date: 19 octobre 2022
+unformat-date: 2022.10.19
+categories: electronique,fdm,impression-3d,octoprint
+image: /images/installation-octoprint-sur-un-orangepi-zero/En-avant.png
+static: true
+type: post
+template: post_fr
+author: Paillat
+lang: fr
 ---
+
+<img src="<!-- image -->" alt="post main image" class="post-main-image">
+
+# Installation d'Octoprint sur un Orangepi zero
 
 L'inflation et la pénurie de composants électroniques ont engendré ces deux dernières années un forte augmentation des prix des cartes raspberry et pénurie de ces micro-ordinateurs. C'est pourquoi aujourd'hui nous allons voir comment installer octoprint, le célèbre système de gestion d'imprimantes 3d à distance, sur une carte Orangepi, moins chère, telle que l'orange pi zero dans notre cas.
 
-# Prérequis matériel
+## Prérequis matériel
 
 Comme matériel il vous faudra:
 
@@ -23,33 +28,38 @@ Comme matériel il vous faudra:
 - Un câble d'alimentation
 - Un câble usb A vers la connectique de votre imprimante
 
-# Prérequis logiciel
+## Prérequis logiciel
 
 Pour performer l'installation, vous aurez besoin de multiples logiciels et fichier, que nous allons voir un par un de suite:
 
-## Installation de Angry IP scanner
+### Installation de Angry IP scanner
 
 Un premier logiciel qu'il nous faudra installer est [Angry IP scanner](https://angryip.org). Il s'agit d'un logiciel qui permettra de scanner votre réseau internet pour trouver son adresse ip.
 
-Vous pouvez le télecharger en cliquant _[ici](https://angryip.org/download/#windows)_, en choisissant la version Windows installer.
+Vous pouvez le télecharger en cliquant [ici](https://angryip.org/download/#windows), en choisissant la version Windows installer.
 
-## Installation de Balena Etcher
+### Installation de Balena Etcher
 
 Le logiciel [Balena Etcher](https://www.balena.io/etcher/) vous permettera de préparer votre carte microSD pour l'orangePI.
 
-Vous pouvez le télecharger en cliquant _[ici](https://www.balena.io/etcher/)_.
+Vous pouvez le télecharger en cliquant [ici](https://www.balena.io/etcher/).
 
-## Télechargement de Armbian
+### Télechargement de Armbian
 
-[Armbian](https://www.armbian.com) sera le système d'exploitation que nous allons installer sur notre carte microSD. Il vous faut télecharger l'image disque de Armbian pour orangepi Zero _[ici](https://www.armbian.com/orange-pi-zero/#:~:text=Torrent%20download-,Direct%20download,-Check%20other%20download)_ en choisissant bien Direct download.
+[Armbian](https://www.armbian.com) sera le système d'exploitation que nous allons installer sur notre carte microSD. Il vous faut télecharger l'image disque de Armbian pour orangepi Zero [ici](https://www.armbian.com/orange-pi-zero/#:~:text=Torrent%20download-,Direct%20download,-Check%20other%20download) en choisissant bien Direct download.
 
-# Installation d'Armbian
+## Installation d'Armbian
 
-## Préparation de la carte microSD
+### Préparation de la carte microSD
 
 Vous allez maintenant ouvrir logiciel Balena Etcher et brancher votre carte microSD à votre ordinateur.
 
-[![](images/Etcher-1.0-1024x552.png)](https://electronique.cc/wp-content/uploads/2022/10/Etcher-1.0.png)
+<div class="images">
+<div class="image">
+<img src="/images/installation-octoprint-sur-un-orangepi-zero/Etcher-1.0.png" alt="Etcher-1.0">
+<blockquote class="image-caption">Vue du logiciel Etcher</blockquote>
+</div>
+</div>
 
 Le logiciel Etcher
 
@@ -57,53 +67,68 @@ Vous allez cliquer sur Select image et ouvrir le fichier Armbian précedemment t
 
 Une fois cette opération terminée vous pourrez débrancher votre carte microSD de votre ordinateur.
 
-## Préparation de l'orangePI
+### Préparation de l'orangePI
 
 Nous allons tout d'abord brancher notre carte microSD dans son emplacement dédie au dessous de notre orangePI.
 
-[![](images/Rectangle-740-1024x667.png)](https://electronique.cc/wp-content/uploads/2022/10/Rectangle-740.png)
-
-Vue du dessus d'un orangePI zero
-
-[![](images/Rectangle-641-2-1024x667.png)](https://electronique.cc/wp-content/uploads/2022/10/Rectangle-641-2.png)
-
-Vue du dessous d'un orangePI zero
+<div class="images">
+<div class="image">
+<img src="/images/installation-octoprint-sur-un-orangepi-zero/Orangepi-schematic-up.png" alt="Orangepi-schematic-up">
+<blockquote class="image-caption">Vue du dessus d'un orangePI zero</blockquote>
+</div>
+<div class="image">
+<img src="/images/installation-octoprint-sur-un-orangepi-zero/Orangepi-schematic-down.png" alt="Orangepi-schematic-down">
+<blockquote class="image-caption">Vue du dessous d'un orangePI zero</blockquote>
+</div>
+</div>
 
 Ensuite, vous allez brancher votre orangePI à votre box internet au moyen du câble ethernet puis brancher l'alimentation.
 
-## Recherche de l'addresse IP
+### Recherche de l'addresse IP
 
 Vous allez maintenant ouvrir le logiciel Angry Ip Scanner et démarrer un balayage de votre réseau local en cliquant sur démarrer .
 
-[![](images/ipscan-win10-1024x609.png)](https://electronique.cc/wp-content/uploads/2022/10/ipscan-win10.png)
-
-La vue du logiciel Angry Ip Scanner
+<div class="images">
+<div class="image">
+<img src="/images/installation-octoprint-sur-un-orangepi-zero/ipscan_1.png" alt="Ip scanner view">
+<blockquote class="image-caption">Vue du logiciel Angry Ip Scanner</blockquote>
+</div>
+</div>
 
 Une fois le scan terminé, trouvez dans la colonne hostame le nom qui s'apparente à orangePI. Si il n'y apparait pas, relancez un second scan.
 
 Notez l'addresse ip marquée dans la colonne IP.
 
-## Configuration d'Armbian
+### Configuration d'Armbian
 
 Maintenant pressez la combinaison de touches Windows + R, tapez `cmd` dans le champ ouvrir puis pressez ok.
 
-[![](images/image.png)](https://electronique.cc/wp-content/uploads/2022/10/image.png)
-
-La fenêtre exécuter
+<div class="images">
+<div class="image">
+<img src="/images/installation-octoprint-sur-un-orangepi-zero/winr_cmd.png" alt="Winr cmd">
+<blockquote class="image-caption">La fenêtre exécuter</blockquote>
+</div>
+</div>
 
 Dans la fenêtre qui va s'ouvrir vous taperez la commade suivante: `ssh root@**votre_addresse_ip**` puis comme mot de passe vous taperes `1234` . Vous devriez normalement voir un texte ressemblant au suivant s'afficher à l'écran:
 
-[![](images/carbon-1-1024x676.png)](https://electronique.cc/wp-content/uploads/2022/10/carbon-1.png)
-
-Vue du setup d'Armbian
+<div class="images">
+<div class="image">
+<img src="/images/installation-octoprint-sur-un-orangepi-zero/ssh_root.png" alt="Ssh root">
+<blockquote class="image-caption">La session ssh root</blockquote>
+</div>
+</div>
 
 Vous allez taper un nouveau mot de passe pour l'utilisateur root, qui est l'administrateur du système. A noter que **ce que vous tapez n'est pas visible** pour des raisons de sécurité.
 
 Une fois cela terminé, poursuivez avec le étapes suivantes comme indiqué sur l'image suivante.
 
-[![](images/carbon-4-1024x655.png)](https://electronique.cc/wp-content/uploads/2022/10/carbon-4.png)
-
-Vue du setup d'Armbian
+<div class="images">
+<div class="image">
+<img src="/images/installation-octoprint-sur-un-orangepi-zero/ssh_root_2.png" alt="Ssh root 2">
+<blockquote class="image-caption">La session ssh root</blockquote>
+</div>
+</div>
 
 Vous devrez créer un nouvel utilisateur, nommé pi, et lui définir un mot de passe, que nous appelleront par la suite **mot de passe pi**. Lorsque vous serez ivites à choisir le pays, veillez à bien choisir fr\_FR.UTF-8.
 
@@ -163,7 +188,7 @@ Vous pourrez alors configurer Octoprint.
 
 Une fois la configuration terminée, vous pouvez retourner dans le terminal et taper le raccourci clavier ctrl+c.
 
-## Activation du démarrage automatique d'Octoprint
+### Activation du démarrage automatique d'Octoprint
 
 Vous allez maintenant éxecuter les commandes suivantes:
 
@@ -183,7 +208,7 @@ Ensuite cette commande pour confirmer les changements:
 
 Voilà, votre octoprint est désormais installé et pret à être utilisé.
 
-## Facultatif - Installation du wifi
+### Facultatif - Installation du wifi
 
 Pour installer le wifi vous devrez exécuter quelques commandes supplémentaires.
 
@@ -191,7 +216,7 @@ La première est: `nmtui-connect **SSID**` ou **SSID** est le nom de votre rése
 
 Vous devrez ensuite taper votre mot de passe WiFi et enfin sélectionner ok, puis entrée.
 
-## Définir une adresse IP statique
+### Définir une adresse IP statique
 
 Pour défiir l'adressse ip comme statique, tapez la commande suivante:
 
@@ -199,9 +224,12 @@ Pour défiir l'adressse ip comme statique, tapez la commande suivante:
 
 Dans le menu, naviquez avec les fleches et sélectionnez Networking
 
-[![](https://electronique.cc/wp-content/uploads/2022/10/armbian-config-8-1024x687.webp)](https://electronique.cc/wp-content/uploads/2022/10/armbian-config-8.webp)
-
-Le menu Networking
+<div class="images">
+<div class="image">
+<img src="/images/installation-octoprint-sur-un-orangepi-zero/armbian-wifi.webp" alt="Armbian wifi">
+<blockquote class="image-caption">Le menu Networking</blockquote>
+</div>
+</div>
 
 Choisissez votre connexion WiFi, puis Static, tapez entrée, puis vous pouvez quitter le menu.
 

@@ -1,26 +1,38 @@
 ---
 title: "Cura 5.0 - une nouvelle géneration"
-date: "2022-04-30"
-categories: 
-  - "impression-3d"
-coverImage: "En-avant-def.png"
+date: 30 avril 2022
+unformat-date: 2022.04.30
+categories: impression-3d
+image: /images/cura-5-0-les-nouveautes/En-avant.png
+author: Paillat
+static: true
+template: post_fr
+type: post
+lang: fr
 ---
+
+<img src="<!-- image -->" alt="post main image" class="post-main-image">
+
+# Cura 5.0 - une nouvelle géneration
 
 Le fabriquant néerlandais d'imprimantes 3d Ultimaker, aussi connu pour la publication du slicer open-source Cura vient de sortir en bêta une nouvelle version de ce dernier. Il s'agit de la version 5.0 et une refonte totale du logiciel a été effectuée. En plus d'une nouvelles icône, plusieurs améliorations ont été effectuées, nous allons voir les principales:
 
-_Vous pouvez installer Cura 5.0 [ici](https://github.com/Ultimaker/Cura/releases/tag/5.0-beta)._
+_Vous pouvez installer Cura 5.0 [ici](https://ultimaker.com/fr/software/ultimaker-cura)._
 
 ## Nouveau moteur de slice
 
 Un nouveau moteur de slice est disponible. Il permet une plus grande rapidité de slicing et d'impression. La qualité a aussi été améliorée, notamment lors de la fusion de deux pièces, mais pas que.
 
-![Cura 4](images/cura-4-vitesse.png)
-
-_Cura 4_
-
-![Cura 5](images/cura-5-vitesse.png)
-
-_Cura 5_
+<div class="images">
+<div class="image">
+<img src="/images/cura-5-0-les-nouveautes/cura-4-vitesse.png" alt="Cura 4">
+<blockquote class="image-caption">Cura 4</blockquote>
+</div>
+<div class="image">
+<img src="/images/cura-5-0-les-nouveautes/cura-5-vitesse.png" alt="Cura 5">
+<blockquote class="image-caption">Cura 5</blockquote>
+</div>
+</div>
 
 Comme vous pouvez le constater ci-dessus, la vitesse d'impression a été améliorée, notamment grâce au nouveau moteur de slice.
 
@@ -50,4 +62,4 @@ Cura 5.0 arrive avec un paquet de nouvelles imprimantes 3d et des profils déja 
 - Snapmaker 2 _mis à jour_
 - Tinyboy Fabricator _mis à jour_
 
-J'espère que cet article vous aura plu, vous pouvez nous retrouver sur [Thingiverse](http://thingiverse.com/nova2007/designs) et dans notre [Discord](https://electronique.cc/discord), et nous soutenir en achetant nos fichiers 3d dans la [boutique](https://electronique.cc/boutique/).
+J'espère que cet article vous aura plu, vous pouvez nous retrouver sur [printables](https://electronique.cc/printables) et nous soutenir en achetant nos fichiers 3d dans la [boutique](https://electronique.cc/boutique/).
