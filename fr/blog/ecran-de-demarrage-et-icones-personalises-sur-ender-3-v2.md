@@ -1,10 +1,13 @@
 ---
-title: "Ecran de démarrage et icônes personnalisées sur Ender 3 v2"
-date: "2022-09-03"
-categories: 
-  - "ender-3-v2"
-  - "impression-3d"
-coverImage: "En-avant.png"
+title: Ecran de démarrage et icônes personnalisées sur Ender 3 v2
+date: 3 septembre 2022
+static: true
+template: post_fr
+type: post
+lang: fr
+author: Paillat
+categories: ender-3,impression-3d
+coverImage: /images/ecran-de-demarrage-et-icones-personalises-sur-ender-3-v2/En-avant.png
 ---
 
 Si vous possédez une imprimante 3d **Ender 3 V2** de chez **CREALITY**, sachez qu'il est très facilement possible de customiser l'interface graphique de celle ci. Pour ce faire vous n'aurez besoin uniquement d'une **carte micro SD** et du logiciel **PAINT.net**. Si vous voulez modifier aussi les icones, vous devrez télécharger **Dwin ICO Tools** (voir dans la rubrique installation) Nous allons maintenant voir étape par étape comment le faire:
@@ -31,7 +34,12 @@ Vous pouvez ensuite remplacer l'image originale par celle custom dans le dossier
 
 Dans votre dossier `DWIN_SET` vous trouverez aussi un ou plusieurs fichiers `.ico`. Ces fichiers contiennent toutes les icones de l'interface. Pour les modifier, je vous conseille aussi de les copier dans un dossier séparé. Une fois copiés, glissez un des fichiers sur l'application `Dwin ICO tools.exe`. Une fenêtre d'alerte pourrais s'ouvrir. Vous pouvez l'ignorer en cliquant sur `en savoir plus` puis `exécuter quand même`. Un terminal va s'ouvrir. Vous devrez alors patienter quelques secondes, puis pourrez fermer ce dernier. Un dossier nommé `out` aura été créé. Il contient toutes les images potentiellement modifiables. Vous pourrez les modifier à votre guise, en suivant les mêmes précautions que pour la modification de l'écran de démarrage. Une fois cela terminé vous pouvez faire glisser le dossier out dans `Dwin ICO tools.exe`. Cela vas recompacter les images en un fichier `.ico` que vous veillerez à renommer comme le fichier d'origine en le remplaçant. Vous pouvez répéter ces passages pour autant de fichiers `.ico` que vous avez, en supprimant le dossier `out` à chaque fois.
 
-[![](images/Capture-decran-2022-09-03-154815.png)](https://electronique.cc/wp-content/uploads/2022/09/Capture-decran-2022-09-03-154815.png)
+<div class="images">
+<div class="image">
+<img src="/images/ecran-de-demarrage-et-icones-personalises-sur-ender-3-v2/screenshot_1.png" alt="La fenêtre d'alerte">
+<blockquote class="image-caption">La fenêtre d'alerte de windows</blockquote>
+</div>
+</div>
 
 ## Formatage de la carte sd
 
