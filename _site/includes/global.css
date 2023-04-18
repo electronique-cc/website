@@ -5,6 +5,16 @@
   color: #000;
 }
 
+/* Hide scrollbar for Firefox */
+::-moz-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
 
 .button {
   background-color: transparent;
