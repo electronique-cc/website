@@ -1,5 +1,8 @@
 import mistune
 from bs4 import BeautifulSoup, Comment
+import os
+import datetime
+import xml.etree.ElementTree as ET
 
 bypass_tags = ["static", "template", "page-title", "title", "modified-date", "content"]
 
@@ -49,8 +52,30 @@ def for_comment(content):
     #find html comments with bs4
     soup = BeautifulSoup(content, 'html.parser')
     comments = soup.find_all(string=lambda text:isinstance(text, Comment))
-    print(comments)
     for comment in comments:
         comments[comments.index(comment)] = str(comment).strip()
     for_comments = [comment[4:] for comment in comments if comment.startswith("FOR ")]
     return for_comments
+
+def generate_sitemap(directory):
+    urls = []
+    for root, dirs, files in os.walk(directory):
+        if root == directory or root == os.path.join(directory, "includes") or root == os.path.join(directory, "images"):
+            continue
+        for file_name in files:
+            if file_name.endswith('.html'):
+                file_path = os.path.join(root, file_name)
+                url = f"http://example.com{file_path[len(directory):]}"
+                url = url.replace("\\", "/")
+                last_modified = datetime.datetime.fromtimestamp(os.path.getmtime(file_path)).strftime('%Y-%m-%dT%H:%M:%S%z')
+                urls.append({'url': url, 'last_modified': last_modified})
+    root = ET.Element('urlset', xmlns='http://www.sitemaps.org/schemas/sitemap/0.9')
+    for url in urls:
+        url_element = ET.SubElement(root, 'url')
+        loc_element = ET.SubElement(url_element, 'loc')
+        loc_element.text = url['url']
+        lastmod_element = ET.SubElement(url_element, 'lastmod')
+        lastmod_element.text = url['last_modified']
+    #return ET.tostring(root, encoding='UTF-8')
+    with open(os.path.join(directory, 'sitemap.xml'), 'w', encoding='utf-8') as file:
+        file.write(ET.tostring(root, encoding='unicode'))
