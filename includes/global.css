@@ -13,7 +13,6 @@
   margin: 10px 0;
   border-radius: 5px;
   text-decoration: none;
-  font-size: 1.5rem;
   display: inline-block;
   max-width: 150px;
 }
@@ -65,7 +64,7 @@ header {
   /*background-color: NOT #dd9933 because of the logo color! iNstead use something like #333 */
   background-color: #333;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   max-width: 100vw;
   display: flex;
   height: 10vh;
@@ -98,11 +97,9 @@ header .logo {
 header .nav-list {
   display: flex;
   list-style: none;
-  padding: min(1rem, 10px); /* common style */
 }
 
 header .nav-item {
-  padding: min(1rem, 10px);
   border-radius: 5px;
   font-size: 1.5rem;
   color: #fff;
@@ -178,10 +175,11 @@ header .menu-toggle {
 
 @media screen and (min-width: 768px) {
   header .nav-list {
-    padding: min(1rem, 10px); /* added to match common style */
+    padding: min(1rem, 20px); /* added to match common style */
   }
 
   header .nav-item {
+    padding: min(1rem, 10px);
     font-size: 1.5rem;
   }
 

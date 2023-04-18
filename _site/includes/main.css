@@ -1,6 +1,6 @@
 /* Hero */
 .hero {
-  background-image: url(https://source.unsplash.com/1600x900/?3dprinter,3dprinting);
+  background-image: url(https://images.unsplash.com/photo-1611505982706-9ebc79e5d3f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
   background-size: cover;
   background-position: center;
   min-height: calc(100vh - 10vh);
@@ -35,9 +35,9 @@
 }
 
 .hero h1 {
-  font-size: min(10vw, 5rem);
   color: #fff;
   margin-bottom: 10px;
+  font-size: 5vw;
 }
 
 .hero p {
@@ -45,6 +45,22 @@
   color: #fff;
   margin-bottom: 50px;
 }
+
+.hero .button {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 7vw
+  }
+  .hero p , .hero .button {
+    font-size:5vw;
+  }
+  
+}
+
+
 
 
 /* Main */

@@ -42,7 +42,7 @@
   word-wrap: break-word;
 }
 
-.post-content p, a, li {
+.post-content p, .post-content a, .post-content li {
   font-size: 1.5rem;
   line-height: 1.5;
   margin-bottom: 20px;
@@ -116,7 +116,7 @@ code:not(pre code) {
   font-size: 1em;
   text-align: left;
   word-spacing: normal;
-  word-break: normal;
+  word-break: break-all;
   word-wrap: break-word;
   line-height: 1.5;
   -moz-tab-size: 4;
