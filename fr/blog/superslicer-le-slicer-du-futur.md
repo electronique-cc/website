@@ -8,6 +8,7 @@ type: post
 lang: fr
 author: Paillat
 date: 1 décembre 2022
+unformat-date: 2022.12.01
 ---
 
 Il existe beaucoup de slicers, tels que Cura, Prusa slicer, Slic3r etc. mais connaissez vous SuperSlicer? Il s'agit d'un Slicer de nouvelle génération, avec plusieurs fonctionnalités bien pratiques.

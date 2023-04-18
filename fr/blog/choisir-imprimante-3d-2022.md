@@ -1,6 +1,7 @@
 ---
 title: Quelle imprimante 3D Choisir en 2022-2023?
 date: 20 octobre 2022
+unformat-date: 2022.10.20
 categories: fdm,impression-3d,resine
 image: /images/choisir-imprimante-3d-2022/En-avant.png
 static: true

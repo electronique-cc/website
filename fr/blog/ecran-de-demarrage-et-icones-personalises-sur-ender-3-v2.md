@@ -1,6 +1,7 @@
 ---
 title: Ecran de démarrage et icônes personnalisées sur Ender 3 v2
 date: 3 septembre 2022
+unformat-date: 2022.09.03
 static: true
 template: post_fr
 type: post

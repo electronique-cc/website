@@ -8,6 +8,7 @@ type: post
 lang: fr
 author: Fives3Dprint
 date: 22 octobre 2022
+unformat-date: 2022.10.22
 ---
 
 Vous voulez scanner un objet en 3d sans devoir débourser plusieurs centaines d'euros? Cet article est pour vous!
