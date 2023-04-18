@@ -1,5 +1,5 @@
 ---
-title: "SuperSlicer: le slicer du futur? Installation et mise à jour"
+title: "SuperSlicer: présentation et installation"
 categories: impression-3d
 image: /images/superslicer-le-slicer-du-futur/En-avant.png
 static: true
@@ -10,6 +10,10 @@ author: Paillat
 date: 1 décembre 2022
 unformat-date: 2022.12.01
 ---
+
+<img src="<!-- image -->" alt="post main image" class="post-main-image">
+
+# SuperSlicer: présentation et installation
 
 Il existe beaucoup de slicers, tels que Cura, Prusa slicer, Slic3r etc. mais connaissez vous SuperSlicer? Il s'agit d'un Slicer de nouvelle génération, avec plusieurs fonctionnalités bien pratiques.
 

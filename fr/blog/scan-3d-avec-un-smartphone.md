@@ -11,6 +11,10 @@ date: 22 octobre 2022
 unformat-date: 2022.10.22
 ---
 
+<img src="<!-- image -->" alt="post main image" class="post-main-image">
+
+# Scanner un objet gratuitement avec votre smartphone
+
 Vous voulez scanner un objet en 3d sans devoir débourser plusieurs centaines d'euros? Cet article est pour vous!
 
 <div class="images">
