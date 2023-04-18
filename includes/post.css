@@ -8,27 +8,27 @@
 }
 
 .post-content h2 {
-  font-size: max(9vw, 5rem);
+  font-size: max(5vw, 3.8rem);
   margin-bottom: 20px;
 }
 
 .post-content h3 {
-  font-size: max(8vw, 4rem);
+  font-size: max(4vw, 3.4rem);
   margin-bottom: 20px;
 }
 
 .post-content h4 {
-  font-size: max(6vw, 3rem);
+  font-size: max(3vw, 3rem);
   margin-bottom: 20px;
 }
 
 .post-content h5 {
-  font-size: max(4vw, 3.5rem);
+  font-size: max(2vw, 2.6rem);
   margin-bottom: 20px;
 }
 
 .post-content h6 {
-  font-size: max(3vw, 2rem);
+  font-size: max(1.8vw, 2.2rem);
   margin-bottom: 20px;
 }
 
@@ -38,11 +38,20 @@
 .post-content h4,
 .post-content h5,
 .post-content h6 {
-  padding: 0.5rem;
   word-wrap: break-word;
 }
 
-.post-content p, .post-content a, .post-content li {
+.post-content h1 a,
+.post-content h2 a,
+.post-content h3 a,
+.post-content h4 a,
+.post-content h5 a,
+.post-content h6 a {
+  color: #000;
+  font-style: normal;
+}
+
+.post-content p, .post-content li {
   font-size: 1.5rem;
   line-height: 1.5;
   margin-bottom: 20px;
@@ -80,8 +89,8 @@
 .post-content a {
   display: inline-block;
   font-style: italic;
-  font-weight: 400;
   transition: transform 0.3s ease-out;
+  margin-bottom: 0;
 }
 
 .post-content a:hover {

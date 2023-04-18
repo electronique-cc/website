@@ -8,27 +8,27 @@
 }
 
 .post-content h2 {
-  font-size: max(9vw, 5rem);
+  font-size: max(5vw, 3.8rem);
   margin-bottom: 20px;
 }
 
 .post-content h3 {
-  font-size: max(8vw, 4rem);
+  font-size: max(4vw, 3.4rem);
   margin-bottom: 20px;
 }
 
 .post-content h4 {
-  font-size: max(6vw, 3rem);
+  font-size: max(3vw, 3rem);
   margin-bottom: 20px;
 }
 
 .post-content h5 {
-  font-size: max(4vw, 3.5rem);
+  font-size: max(2vw, 2.6rem);
   margin-bottom: 20px;
 }
 
 .post-content h6 {
-  font-size: max(3vw, 2rem);
+  font-size: max(1.8vw, 2.2rem);
   margin-bottom: 20px;
 }
 
@@ -38,11 +38,20 @@
 .post-content h4,
 .post-content h5,
 .post-content h6 {
-  padding: 0.5rem;
   word-wrap: break-word;
 }
 
-.post-content p, .post-content a, .post-content li {
+.post-content h1 a,
+.post-content h2 a,
+.post-content h3 a,
+.post-content h4 a,
+.post-content h5 a,
+.post-content h6 a {
+  color: #000;
+  font-style: normal;
+}
+
+.post-content p, .post-content li {
   font-size: 1.5rem;
   line-height: 1.5;
   margin-bottom: 20px;
@@ -79,10 +88,9 @@
 
 .post-content a {
   display: inline-block;
-  color: #fff;
   font-style: italic;
-  font-weight: 400;
   transition: transform 0.3s ease-out;
+  margin-bottom: 0;
 }
 
 .post-content a:hover {
@@ -104,11 +112,6 @@
   width: 70vw;
 }
 
-.image-caption {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
 code:not(pre code) {
   color: #000;
   background: 0 0;
@@ -128,4 +131,41 @@ code:not(pre code) {
   hyphens: none;
   background: #f5f2f0;
   display: inline-block;
+}
+
+.post-content .images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.post-content .image {
+  width: 33%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.post-content .image-caption {
+  display: block;
+  font-style: italic;
+  margin-top: 5px;
+  font-size: 1.5rem;
+}
+
+.post-content .image-caption a {
+  font-weight: 300;
+}
+
+.post-content .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
 }

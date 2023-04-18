@@ -13,7 +13,7 @@ def recursive_block(content, block, source_dir, template_dir, extensions, langua
                 if "static" not in tags or tags["static"] != "true" or "type" not in tags or tags["type"] != "post" or "lang" not in tags or tags["lang"] != language:
                     continue
                 title = tags["title"] if "title" in tags else os.path.splitext(file_name)[0]
-                modified_date = tags["modified-date"] if "modified-date" in tags else time.strftime("%d %B %Y", time.gmtime(os.path.getmtime(os.path.join(root, file_name))))
+                modified_date = tags["date"] if "date" in tags else time.strftime("%d %B %Y", time.gmtime(os.path.getmtime(os.path.join(root, file_name))))
                 link = os.path.join(root, file_name).replace("\\", "/")[len(source_dir):]
                 for ext in extensions:
                     if link.endswith(ext):

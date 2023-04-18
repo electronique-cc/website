@@ -9,7 +9,7 @@ templates_dir = "_templates"
 backup_dir = "_site_old"
 images_urls = f"{templates_dir}/imgurls.txt"
 extensions = [".html", ".md"]
-website_name = "My Website"
+website_name = "electronique.cc"
 scripts_dir = "_scripts"
 ignore_files = ["static.py", "utils.py", "config.py", "README.md", "LICENSE", "requirements.txt", "CNAME", ".htaccess", ".gitignore", ".git"]
 
