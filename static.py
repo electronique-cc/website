@@ -68,7 +68,7 @@ def process_files(destination_dir):
                         if not tag in bypass_tags: final_content = final_content.replace(f"<!-- {tag} -->", tags[tag])
                         if tag == "title":
                             title = tags[tag]
-                    final_content = final_content.replace("<!-- page-title -->", f"{file_name.split('.')[0]} - {website_name}" if not title else f"{title} - {website_name}").replace("<!-- canonical-url -->", canonical_url)
+                    final_content = final_content.replace("<!-- page-title -->", f"{file_name.split('.')[0]} - {website_name}" if not title else f"{title} - {website_name}").replace("<!-- canonical-url -->", canonical_url).replace("<!-- post-id -->", file_name.split(".")[0] if "type" in tags and tags["type"] == "post" else "")
                     for comment in for_comment(final_content):
                         for line in comment.splitlines():
                             locales = locals()

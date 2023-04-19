@@ -189,3 +189,7 @@ code:not(pre code) {
   padding: 10px;
   box-sizing: border-box;
 }
+
+#disqus_thread {
+  padding: 5vw;
+}

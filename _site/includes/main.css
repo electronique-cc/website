@@ -81,6 +81,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .post-block {
@@ -101,13 +102,15 @@
 @media screen and (max-width: 440px) {
   .post-block {
     max-width: 400px;
+    width: 100%;
   }
 }
 
 @media screen and (min-width: 440px) {
   .post-block {
+    width: 33vw;
     min-width: 400px;
-    max-width: 33vw;
+    height: 80vh;
   }
 }
 
