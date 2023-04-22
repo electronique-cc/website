@@ -9,6 +9,9 @@ lang: fr
 image: /images/chatGPT-vs-bard/En-avant.png
 type: post
 ---
+
+<img src="<!-- image -->" alt="post main image" class="post-main-image">
+
 # ChatGPT vs Bard - Quel est le meilleur assistant au code?
 
 ChatGPT et Bard sont deux modèles d’IA génératifs qui ont récemment fait leur apparition sur le marché. ChatGPT, développé par OpenAI, a été introduit en novembre 2022 et a rapidement gagné en popularité grâce à ses capacités de génération de texte de type humain1. Bard, quant à lui, est le concurrent de Google à ChatGPT et a été mis à jour pour générer du code dans plus de 20 langages de programmation2. Dans cet article, nous allons comparer ces deux modèles d’IA et voir lequel est le meilleur pour l’assistance au code.
@@ -77,7 +80,7 @@ Les deux programmes générés par ChatGPT et Bard fonctionnent parfaitement, to
         <blockquote class="image-caption">Le site web créé par Bard</blockquote>
     </div>
     <div class="image" style="width: 50%;">
-        <img src="/images/chatGPT-vs-bard/chatGPT-website.png" alt="ChatGPT's website">
+        <img src="/images/chatGPT-vs-bard/chatgpt-website.png" alt="ChatGPT's website">
         <blockquote class="image-caption">Le site web créé par ChatGPT</blockquote>
     </div>
 </div>
