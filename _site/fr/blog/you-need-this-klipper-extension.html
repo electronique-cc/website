@@ -9,7 +9,7 @@
   </script>
   <script defer="" src="/includes/post.js">
   </script>
-  <link href="https://electronique.cc/fr/blog/you-need-this-klipper-exetnsion" rel="canonical"/>
+  <link href="https://electronique.cc/fr/blog/you-need-this-klipper-extension" rel="canonical"/>
   <link async="" href="https://use.typekit.net/pnu1ybg.css" rel="stylesheet"/>
   <link href="/images/favicon.png" rel="icon">
    <link href="/images/favicon.png" rel="icon"/>
@@ -67,7 +67,7 @@
     </h1>
     <img alt="post main image" class="post-main-image" src="/images/you-need-this-klipper-extension/En-avant.png"/>
     <p>
-     Si vous avez déjà utilisé Klipper, vous savez à quel Klipper est utile et permet de booster les capacités de votre imprimante 3D. Mais il peut être encore meilleur avec cette extension gratuite, qui vous permettra de gagner du temps et de l'argent, en stoppant automatiquement votre impression en cas d'échec d'impression, vous permettant ainsi de ne pas gaspiller de filament, ni de temps.
+     Si vous avez déjà utilisé Klipper, vous savez à quel point Klipper est utile et permet de booster les capacités de votre imprimante 3D. Mais il peut être encore meilleur avec cette extension gratuite, qui vous permettra de gagner du temps et de l'argent, en stoppant automatiquement votre impression en cas d'échec d'impression, vous permettant ainsi de ne pas gaspiller de filament, ni de temps.
     </p>
     <p>
      Cette extension fonctionne grâce à une caméra qui va surveiller votre impression et détecter les échecs d'impression par le biais d'un modèle d'IA. Elle est compatible avec les caméras Raspberry Pi, mais aussi avec les caméras USB standard.
@@ -79,11 +79,11 @@
      Prérequis
     </h3>
     <p>
-     Pour installer cette extension, vous aurez deux possibilités : soit vous utilisez les serveurs de Obico, l'entreprise ayant développé cette extension, mais les possibilités seront limitées et il vous faudra payer un abonnementpour débloquer ces fonctionnalités, soit vous installez votre propre serveur. Dans les deux cas, vous aurez besoin d'un Raspberry Pi avec une caméra et Klipper installé au préalable. Si vous utilisez votre propre serveur, vous aurez aussi besoin d'un ordinateur pour l'installer, un Raspberry Pi ne suffira pas pour ce faire, à titre d'éxemple un vieil ordinateur avec un processeur Intel intel de génération 4 ou plus avec au moins 4gb de ram fera l'affaire. Vous pouvez trouver
+     Pour installer cette extension, vous aurez deux possibilités : soit vous utilisez les serveurs de Obico, l'entreprise ayant développé cette extension, mais les possibilités seront limitées et il vous faudra payer un abonnement pour débloquer ces fonctionnalités, soit vous installez votre propre serveur. Dans les deux cas, vous aurez besoin d'un Raspberry Pi avec une caméra et Klipper installé au préalable. Si vous utilisez votre propre serveur, vous aurez aussi besoin d'un ordinateur pour l'installer, un Raspberry Pi ne suffira pas pour ce faire, à titre d'exemple un vieil ordinateur avec un processeur Intel intel de génération 4 ou plus avec au moins 4gb de ram fera l'affaire. Vous pouvez trouver
      <a href="https://obico.io/docs/server-guides/hardware-requirements/">
       ici
      </a>
-     les spécifications recommandées par Obico. Cet ordinateur devra être connecté au même réseau que votre Raspberry Pi, et devra avoir Linux installé dessus. Nous vous recommandons d'utiliser Ubuntu 22.04, mais vous pouvez utiliser n'importe quelle distribution Linux. VOus pouvez trouver
+     les spécifications recommandées par Obico. Cet ordinateur devra être connecté au même réseau que votre Raspberry Pi, et devra avoir Linux installé dessus. Nous vous recommandons d'utiliser Ubuntu 22.04, mais vous pouvez utiliser n'importe quelle distribution Linux. Vous pouvez trouver
      <a href="https://lecrabeinfo.net/installer-ubuntu-22-04-lts-le-guide-complet.html">
       ici
      </a>
@@ -107,7 +107,7 @@ Donc, pour résumer, vous aurez besoin de :
       <strong>
        ordinateur
       </strong>
-      avec Linux installé (FACULTATIF si vous utilisez les serveurs de Obico)
+      avec Linux installé (OPTIONNEL si vous utilisez les serveurs de Obico)
      </li>
      <li>
       Une
@@ -118,7 +118,7 @@ Donc, pour résumer, vous aurez besoin de :
      </li>
     </ul>
     <h3>
-     Installation du serveur (FACULTATIF si vous utilisez les serveurs de Obico)
+     Installation du serveur (OPTIONNEL si vous utilisez les serveurs de Obico)
     </h3>
     <p>
      Nous allons directement utiliser le script d'installation de Obico, qui va installer le serveur pour nous. Pour ce faire, il vous suffit de copier les commandes suivante dans votre terminal de votre serveur une à une
@@ -130,7 +130,7 @@ Donc, pour résumer, vous aurez besoin de :
     <pre><code class="language-bash">sudo apt update &amp;&amp; sudo apt upgrade -y
 sudo apt install docker docker-compose git -y
 git clone -b release https://github.com/TheSpaghettiDetective/obico-server.git
-cd obico-server &amp;&amp; sudo sudo docker compose up -d
+cd obico-server &amp;&amp; sudo docker compose up -d
 </code></pre>
     <p>
      Si la dernière commande ne fonctionne pas, vous pouvez essayer celle-ci :
@@ -142,7 +142,7 @@ cd obico-server &amp;&amp; sudo sudo docker compose up -d
      <a href="https://encause.fr/comment-configurer-une-adresse-ip-statique-sur-ubuntu-22-04-lts-et-22-10/">
       ici
      </a>
-     un guide pour le faire sous Ubuntu 22.04. Vous touverez facilement des guides pour le faire sous d'autres distributions Linux.
+     un guide pour le faire sous Ubuntu 22.04. Vous trouverez facilement des guides pour le faire sous d'autres distributions Linux.
     </p>
     <p>
      Maintenant, vous devez vous rendre sur l'adresse
@@ -196,7 +196,7 @@ cd obico-server &amp;&amp; sudo sudo docker compose up -d
      Installation de l'extension
     </h3>
     <p>
-     Tout d'abrd connectez vous à votre Raspberry PI en
+     Tout d'abord connectez vous à votre Raspberry PI en
      <code>
       SSH
      </code>
@@ -208,10 +208,10 @@ cd obico-server &amp;&amp; sudo sudo docker compose up -d
     <pre><code class="language-bash">    cd ~ &amp;&amp; git clone https://github.com/TheSpaghettiDetective/moonraker-obico.git &amp;&amp; cd moonraker-obico &amp;&amp; ./install.sh
 </code></pre>
     <p>
-     Vous pourrez accepter les messages et insérer votre mot d passe sudo si nécessaire.
+     Vous pourrez accepter les messages et insérer votre mot de passe sudo si nécessaire.
     </p>
     <p>
-     Lorsque le message suivant apparsitra:
+     Lorsque le message suivant apparaîtra:
     </p>
     <pre><code class="language-bash">Now tell us what Obico Server you want to link your printer to.
 You can use a self-hosted Obico Server or the Obico Cloud. For more information, please visit: https://obico.io.
@@ -300,8 +300,8 @@ For self-hosted server, specify "http://server_ip:port". For instance, http://19
          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
         /*
     var disqus_config = function () {
-    this.page.url = https://electronique.cc/fr/blog/you-need-this-klipper-exetnsion;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = you-need-this-klipper-exetnsion; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    this.page.url = https://electronique.cc/fr/blog/you-need-this-klipper-extension;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = you-need-this-klipper-extension; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
         (function () {

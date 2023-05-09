@@ -13,27 +13,27 @@ type: post
 
 <img src="<!-- image -->" alt="post main image" class="post-main-image">
 
-Si vous avez déjà utilisé Klipper, vous savez à quel Klipper est utile et permet de booster les capacités de votre imprimante 3D. Mais il peut être encore meilleur avec cette extension gratuite, qui vous permettra de gagner du temps et de l'argent, en stoppant automatiquement votre impression en cas d'échec d'impression, vous permettant ainsi de ne pas gaspiller de filament, ni de temps.
+Si vous avez déjà utilisé Klipper, vous savez à quel point Klipper est utile et permet de booster les capacités de votre imprimante 3D. Mais il peut être encore meilleur avec cette extension gratuite, qui vous permettra de gagner du temps et de l'argent, en stoppant automatiquement votre impression en cas d'échec d'impression, vous permettant ainsi de ne pas gaspiller de filament, ni de temps.
 
 Cette extension fonctionne grâce à une caméra qui va surveiller votre impression et détecter les échecs d'impression par le biais d'un modèle d'IA. Elle est compatible avec les caméras Raspberry Pi, mais aussi avec les caméras USB standard.
 
 ## Installation
 
 ### Prérequis
-Pour installer cette extension, vous aurez deux possibilités : soit vous utilisez les serveurs de Obico, l'entreprise ayant développé cette extension, mais les possibilités seront limitées et il vous faudra payer un abonnementpour débloquer ces fonctionnalités, soit vous installez votre propre serveur. Dans les deux cas, vous aurez besoin d'un Raspberry Pi avec une caméra et Klipper installé au préalable. Si vous utilisez votre propre serveur, vous aurez aussi besoin d'un ordinateur pour l'installer, un Raspberry Pi ne suffira pas pour ce faire, à titre d'éxemple un vieil ordinateur avec un processeur Intel intel de génération 4 ou plus avec au moins 4gb de ram fera l'affaire. Vous pouvez trouver [ici](https://obico.io/docs/server-guides/hardware-requirements/) les spécifications recommandées par Obico. Cet ordinateur devra être connecté au même réseau que votre Raspberry Pi, et devra avoir Linux installé dessus. Nous vous recommandons d'utiliser Ubuntu 22.04, mais vous pouvez utiliser n'importe quelle distribution Linux. VOus pouvez trouver [ici](https://lecrabeinfo.net/installer-ubuntu-22-04-lts-le-guide-complet.html) un guide pour installer Ubuntu 22.04.
+Pour installer cette extension, vous aurez deux possibilités : soit vous utilisez les serveurs de Obico, l'entreprise ayant développé cette extension, mais les possibilités seront limitées et il vous faudra payer un abonnement pour débloquer ces fonctionnalités, soit vous installez votre propre serveur. Dans les deux cas, vous aurez besoin d'un Raspberry Pi avec une caméra et Klipper installé au préalable. Si vous utilisez votre propre serveur, vous aurez aussi besoin d'un ordinateur pour l'installer, un Raspberry Pi ne suffira pas pour ce faire, à titre d'exemple un vieil ordinateur avec un processeur Intel intel de génération 4 ou plus avec au moins 4gb de ram fera l'affaire. Vous pouvez trouver [ici](https://obico.io/docs/server-guides/hardware-requirements/) les spécifications recommandées par Obico. Cet ordinateur devra être connecté au même réseau que votre Raspberry Pi, et devra avoir Linux installé dessus. Nous vous recommandons d'utiliser Ubuntu 22.04, mais vous pouvez utiliser n'importe quelle distribution Linux. Vous pouvez trouver [ici](https://lecrabeinfo.net/installer-ubuntu-22-04-lts-le-guide-complet.html) un guide pour installer Ubuntu 22.04.
 Donc, pour résumer, vous aurez besoin de :
 - Un **Raspberry Pi** avec **Klipper** installé
-- Un **ordinateur** avec Linux installé (FACULTATIF si vous utilisez les serveurs de Obico)
+- Un **ordinateur** avec Linux installé (OPTIONNEL si vous utilisez les serveurs de Obico)
 - Une **caméra** Raspberry Pi ou USB
 
-### Installation du serveur (FACULTATIF si vous utilisez les serveurs de Obico)
+### Installation du serveur (OPTIONNEL si vous utilisez les serveurs de Obico)
 Nous allons directement utiliser le script d'installation de Obico, qui va installer le serveur pour nous. Pour ce faire, il vous suffit de copier les commandes suivante dans votre terminal de votre serveur une à une  **N'EXECUTEZ PAS CES COMMANDES SUR VOTRE RASPBERRY PI** :
 
 ```bash
 sudo apt update && sudo apt upgrade -y
 sudo apt install docker docker-compose git -y
 git clone -b release https://github.com/TheSpaghettiDetective/obico-server.git
-cd obico-server && sudo sudo docker compose up -d
+cd obico-server && sudo docker compose up -d
 ```
 
 Si la dernière commande ne fonctionne pas, vous pouvez essayer celle-ci :
@@ -41,7 +41,7 @@ Si la dernière commande ne fonctionne pas, vous pouvez essayer celle-ci :
 sudo docker-compose up -d
 ```
 
-Vous devez ensuite définir une IP fixe. Vous pouvez trouver [ici](https://encause.fr/comment-configurer-une-adresse-ip-statique-sur-ubuntu-22-04-lts-et-22-10/) un guide pour le faire sous Ubuntu 22.04. Vous touverez facilement des guides pour le faire sous d'autres distributions Linux.
+Vous devez ensuite définir une IP fixe. Vous pouvez trouver [ici](https://encause.fr/comment-configurer-une-adresse-ip-statique-sur-ubuntu-22-04-lts-et-22-10/) un guide pour le faire sous Ubuntu 22.04. Vous trouverez facilement des guides pour le faire sous d'autres distributions Linux.
 
 Maintenant, vous devez vous rendre sur l'adresse `VOTRE_IP:3334/admin/` (remplacez `VOTRE_IP` par l'adresse IP de votre serveur) et vous connecter avec le compte `root@example.com` et le mot de passe `supersecret`. Vous devriez voir une page comme celle-ci :
 
@@ -60,7 +60,7 @@ Et voilà, vous avez terminé!
 
 ### Installation de l'extension
 
-Tout d'abrd connectez vous à votre Raspberry PI en `SSH`.
+Tout d'abord connectez vous à votre Raspberry PI en `SSH`.
 
 Une fois cela effectué, tapez la commande suivante dans votre terminal:
 
@@ -68,9 +68,9 @@ Une fois cela effectué, tapez la commande suivante dans votre terminal:
     cd ~ && git clone https://github.com/TheSpaghettiDetective/moonraker-obico.git && cd moonraker-obico && ./install.sh
 ```
 
-Vous pourrez accepter les messages et insérer votre mot d passe sudo si nécessaire.
+Vous pourrez accepter les messages et insérer votre mot de passe sudo si nécessaire.
 
-Lorsque le message suivant apparsitra:
+Lorsque le message suivant apparaîtra:
 ```bash
 Now tell us what Obico Server you want to link your printer to.
 You can use a self-hosted Obico Server or the Obico Cloud. For more information, please visit: https://obico.io.
