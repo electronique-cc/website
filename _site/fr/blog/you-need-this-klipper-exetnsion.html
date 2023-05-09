@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="/includes/post.css" rel="stylesheet"/>
+  <link href="/includes/global.css" rel="stylesheet"/>
+  <script defer="" src="/includes/main.js">
+  </script>
+  <script defer="" src="/includes/post.js">
+  </script>
+  <link href="https://electronique.cc/fr/blog/you-need-this-klipper-exetnsion" rel="canonical"/>
+  <link async="" href="https://use.typekit.net/pnu1ybg.css" rel="stylesheet"/>
+  <link href="/images/favicon.png" rel="icon">
+   <link href="/images/favicon.png" rel="icon"/>
+   <title>
+    Il vous faut cette extension gratuite pour Klipper - electronique.cc
+   </title>
+   <script crossorigin="anonymous" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+   </script>
+   <script crossorigin="anonymous" integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldmmxwD9mdm2IRTTi0OxSAfEGvgEi0i2Kw==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js">
+   </script>
+   <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+   <script crossorigin="anonymous" integrity="sha512-whYhDwtTmlC/NpZlCr6PSsAaLOrfjVg/iXAnC4H/dtiHawpShhT2SlIMbpIhT/IL/NrpdMm+Hq2C13+VKpHTYw==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js">
+   </script>
+  </link>
+ </head>
+ <body>
+  <header>
+   <a href="/fr">
+    <img alt="Logo de electronique.cc" class="logo" src="/images/logo.png"/>
+   </a>
+   <nav>
+    <p class="menu-toggle">
+     Menu
+    </p>
+    <ul class="nav-list">
+     <a class="language-switcher" href="#">
+      <li class="nav-item">
+       English
+      </li>
+     </a>
+     <a class="nav-link" href="/fr">
+      <li class="nav-item">
+       Accueil
+      </li>
+     </a>
+     <a class="nav-link" href="/fr/blog/index.html">
+      <li class="nav-item">
+       Blog
+      </li>
+     </a>
+     <a class="nav-link" href="/fr/shop/index.html">
+      <li class="nav-item">
+       Boutique
+      </li>
+     </a>
+    </ul>
+   </nav>
+  </header>
+  <div class="header-spacer">
+  </div>
+  <section class="main">
+   <div class="post-content">
+    <h1>
+     Il vous faut cette extension gratuite pour Klipper
+    </h1>
+    <img alt="post main image" class="post-main-image" src="/images/you-need-this-klipper-extension/En-avant.png"/>
+    <p>
+     Si vous avez déjà utilisé Klipper, vous savez à quel Klipper est utile et permet de booster les capacités de votre imprimante 3D. Mais il peut être encore meilleur avec cette extension gratuite, qui vous permettra de gagner du temps et de l'argent, en stoppant automatiquement votre impression en cas d'échec d'impression, vous permettant ainsi de ne pas gaspiller de filament, ni de temps.
+    </p>
+    <p>
+     Cette extension fonctionne grâce à une caméra qui va surveiller votre impression et détecter les échecs d'impression par le biais d'un modèle d'IA. Elle est compatible avec les caméras Raspberry Pi, mais aussi avec les caméras USB standard.
+    </p>
+    <h2>
+     Installation
+    </h2>
+    <h3>
+     Prérequis
+    </h3>
+    <p>
+     Pour installer cette extension, vous aurez deux possibilités : soit vous utilisez les serveurs de Obico, l'entreprise ayant développé cette extension, mais les possibilités seront limitées et il vous faudra payer un abonnementpour débloquer ces fonctionnalités, soit vous installez votre propre serveur. Dans les deux cas, vous aurez besoin d'un Raspberry Pi avec une caméra et Klipper installé au préalable. Si vous utilisez votre propre serveur, vous aurez aussi besoin d'un ordinateur pour l'installer, un Raspberry Pi ne suffira pas pour ce faire, à titre d'éxemple un vieil ordinateur avec un processeur Intel intel de génération 4 ou plus avec au moins 4gb de ram fera l'affaire. Vous pouvez trouver
+     <a href="https://obico.io/docs/server-guides/hardware-requirements/">
+      ici
+     </a>
+     les spécifications recommandées par Obico. Cet ordinateur devra être connecté au même réseau que votre Raspberry Pi, et devra avoir Linux installé dessus. Nous vous recommandons d'utiliser Ubuntu 22.04, mais vous pouvez utiliser n'importe quelle distribution Linux. VOus pouvez trouver
+     <a href="https://lecrabeinfo.net/installer-ubuntu-22-04-lts-le-guide-complet.html">
+      ici
+     </a>
+     un guide pour installer Ubuntu 22.04.
+Donc, pour résumer, vous aurez besoin de :
+    </p>
+    <ul>
+     <li>
+      Un
+      <strong>
+       Raspberry Pi
+      </strong>
+      avec
+      <strong>
+       Klipper
+      </strong>
+      installé
+     </li>
+     <li>
+      Un
+      <strong>
+       ordinateur
+      </strong>
+      avec Linux installé (FACULTATIF si vous utilisez les serveurs de Obico)
+     </li>
+     <li>
+      Une
+      <strong>
+       caméra
+      </strong>
+      Raspberry Pi ou USB
+     </li>
+    </ul>
+    <h3>
+     Installation du serveur (FACULTATIF si vous utilisez les serveurs de Obico)
+    </h3>
+    <p>
+     Nous allons directement utiliser le script d'installation de Obico, qui va installer le serveur pour nous. Pour ce faire, il vous suffit de copier les commandes suivante dans votre terminal de votre serveur une à une
+     <strong>
+      N'EXECUTEZ PAS CES COMMANDES SUR VOTRE RASPBERRY PI
+     </strong>
+     :
+    </p>
+    <pre><code class="language-bash">sudo apt update &amp;&amp; sudo apt upgrade -y
+sudo apt install docker docker-compose git -y
+git clone -b release https://github.com/TheSpaghettiDetective/obico-server.git
+cd obico-server &amp;&amp; sudo sudo docker compose up -d
+</code></pre>
+    <p>
+     Si la dernière commande ne fonctionne pas, vous pouvez essayer celle-ci :
+    </p>
+    <pre><code class="language-bash">sudo docker-compose up -d
+</code></pre>
+    <p>
+     Vous devez ensuite définir une IP fixe. Vous pouvez trouver
+     <a href="https://encause.fr/comment-configurer-une-adresse-ip-statique-sur-ubuntu-22-04-lts-et-22-10/">
+      ici
+     </a>
+     un guide pour le faire sous Ubuntu 22.04. Vous touverez facilement des guides pour le faire sous d'autres distributions Linux.
+    </p>
+    <p>
+     Maintenant, vous devez vous rendre sur l'adresse
+     <code>
+      VOTRE_IP:3334/admin/
+     </code>
+     (remplacez
+     <code>
+      VOTRE_IP
+     </code>
+     par l'adresse IP de votre serveur) et vous connecter avec le compte
+     <code>
+      root@example.com
+     </code>
+     et le mot de passe
+     <code>
+      supersecret
+     </code>
+     . Vous devriez voir une page comme celle-ci :
+    </p>
+    <div class="images">
+     <div class="image">
+      <img alt="Django login page" src="/images/you-need-this-klipper-extension/DJANGO_LOGIN.png"/>
+      <blockquote class="image-caption">
+       Page de connexion
+      </blockquote>
+     </div>
+    </div>
+    <p>
+     Rendez-vous ensuite sur
+     <code>
+      VOTRE_IP:3334/admin/app/user/1/password/
+     </code>
+     et changez le mot de passe. Vous pouvez maintenant vous connecter avec votre nouveau mot de passe à l'inérface d'administration.
+    </p>
+    <p>
+     Maintenant, rendez-vous sur
+     <code>
+      VOTRE_IP::3334/admin/sites/site/1/change/
+     </code>
+     et modifiez les deux champs présents pour y insérer votre adresse IP.
+     <strong>
+      N'oubliez pas de sauvegarder!
+     </strong>
+     .
+    </p>
+    <p>
+     Et voilà, vous avez terminé!
+    </p>
+    <h3>
+     Installation de l'extension
+    </h3>
+    <p>
+     Tout d'abrd connectez vous à votre Raspberry PI en
+     <code>
+      SSH
+     </code>
+     .
+    </p>
+    <p>
+     Une fois cela effectué, tapez la commande suivante dans votre terminal:
+    </p>
+    <pre><code class="language-bash">    cd ~ &amp;&amp; git clone https://github.com/TheSpaghettiDetective/moonraker-obico.git &amp;&amp; cd moonraker-obico &amp;&amp; ./install.sh
+</code></pre>
+    <p>
+     Vous pourrez accepter les messages et insérer votre mot d passe sudo si nécessaire.
+    </p>
+    <p>
+     Lorsque le message suivant apparsitra:
+    </p>
+    <pre><code class="language-bash">Now tell us what Obico Server you want to link your printer to.
+You can use a self-hosted Obico Server or the Obico Cloud. For more information, please visit: https://obico.io.
+For self-hosted server, specify "http://server_ip:port". For instance, http://192.168.0.5:3334.
+</code></pre>
+    <p>
+     Vous pourrez simplement appuyer sur
+     <code>
+      Entrée
+     </code>
+     pour utiliser les serveurs de Obico, ou insérer l'adresse IP de votre serveur si vous en avez installé un auparavant, en spécifiant le port (par défaut 3334), exemple:
+     <code>
+      http://VOTRE_IP:3334
+     </code>
+     .
+    </p>
+    <p>
+     On vous demandera ensuite de spécifier un code d'accès. Dans le cas ou vous utilisez le serveur installé aupravant, rendez vous dans votre navigateur sur
+     <code>
+      http://VOTRE_IP:3334
+     </code>
+     et connectez vous avec le compte admin et le mot de passe specifié auparavant. Au contraire, si vous voulez utiliser les serveurs d'Obico, rendez-vous sur leur site web
+     <a href="https://app.obico.io/accounts/signup/">
+      ici
+     </a>
+     et créez un compte si nécessaire, sinon connectez vous avec votre compte.
+    </p>
+    <p>
+     Vous verrez dans les deux cas une page comme celles-ci:
+    </p>
+    <div class="images">
+     <div class="image">
+      <img alt="Obico welcome page" src="https://www.obico.io/assets/images/welcome-web-0df98f779b3afdaf66556e3fbce5f386.jpg"/>
+      <blockquote class="image-caption">
+       Page de bienvenue si vous créez un compte
+      </blockquote>
+     </div>
+     <div class="image">
+      <img alt="Obico select platform page" src="https://www.obico.io/img/user-guides/setupguide/select-platform-web.jpg"/>
+      <blockquote class="image-caption">
+       Page de sélection de Klipper
+      </blockquote>
+     </div>
+    </div>
+    <p>
+     Sélectionnez Link printer, Klipper puis cliquez sur Next. Vous verrez alors une page comme celle-ci avec un code d'accès:
+    </p>
+    <div class="images">
+     <div class="image">
+      <img alt="Obico verification code page" src="https://www.obico.io/img/user-guides/setupguide/klipper-verification-code-web.jpg"/>
+      <blockquote class="image-caption">
+       Page de code d'accès
+      </blockquote>
+     </div>
+    </div>
+    <p>
+     Copiez le code d'accès et collez le dans votre terminal, puis appuyez sur
+     <code>
+      Entrée
+     </code>
+     .
+    </p>
+    <p>
+     C'est terminé! Vous pouvez maintenant vous rendre sur
+     <code>
+      http://VOTRE_IP:3334
+     </code>
+     si vous utilisez votre propre serveur, ou sur
+     <code>
+      https://app.obico.io
+     </code>
+     si vous utilisez les serveurs de Obico, et vous connecter avec votre compte. Vous devriez voir votre imprimante dans la liste des imprimantes, et pouvoir la connecter. Vous pourrez alors activer les services de détection par IA dans les paramètres de votre imprimante.
+    </p>
+    <h1>
+     Conclusion
+    </h1>
+    <p>
+     Nous avons maintenant terminé! Vous pouvez maintenant utiliser les services de détection par IA de Obico pour surveiller vos impressions. Si vous avez des questions, n'hésitez pas à les poser dans les commentaires, je vous répondrai dès que possible. En attendant, c'était Paillat et à la prochaine!
+    </p>
+   </div>
+   <div id="disqus_thread">
+   </div>
+   <script>
+    /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        /*
+    var disqus_config = function () {
+    this.page.url = https://electronique.cc/fr/blog/you-need-this-klipper-exetnsion;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = you-need-this-klipper-exetnsion; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+        (function () {
+          // DON'T EDIT BELOW THIS LINE
+          var d = document,
+            s = d.createElement("script");
+          s.src = "https://eletronique-cc.disqus.com/embed.js";
+          s.setAttribute("data-timestamp", +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+   </script>
+   <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">
+     comments.
+    </a>
+   </noscript>
+  </section>
+  <footer>
+   <p>
+    © 2022 electronique.cc. Tous droits réservés.
+   </p>
+  </footer>
+ </body>
+</html>

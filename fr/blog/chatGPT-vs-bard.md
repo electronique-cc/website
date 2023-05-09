@@ -2,7 +2,6 @@
 author: Paillat
 title: ChatGPT vs Bard - Quel est le meilleur assistant au code?
 description: Dans cet article, nous allons comparer deux IA génératives, ChatGPT et Bard, et voir laquelle est la meilleure pour l'assistance au code.
-image: REPLACE_WITH_IMAGE_URL
 static: true
 template: post_fr
 lang: fr
